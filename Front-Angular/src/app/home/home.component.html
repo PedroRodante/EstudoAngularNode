@@ -1,0 +1,18 @@
+  <div class="container">
+    <h1>Bem vindo a prova do {{aluno}}</h1>
+    <h2>Esse é nossa home e nosso componente.</h2>
+    <h2>------------------------------------------</h2>
+    <h3>Vamos chamar a primeira função!</h3>
+    <div class="botao" (click)="funcao1()">
+      Clique Aqui!
+    </div>
+    <h2>------------------------------------------</h2>
+    <form action="">
+      <h3>Agora somaremos 2 numeros!</h3>
+      <label for="n1">Insira o primeiro numero</label>
+      <input type="number" id="n1" name="n2" required placeholder ="Pega leve" #n1>
+      <label for="n2">Insira o segundo numero</label>
+      <input type="number" id="n2" name="n2" required placeholder ="Pega leve" #n2>
+      <button class="botao" (click)="funcao2(n1.value, n2.value)">Some!</button>
+    </form>
+  </div>

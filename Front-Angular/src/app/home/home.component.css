@@ -1,0 +1,53 @@
+
+h1{
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bolder;
+}
+
+h2{
+  font-family: 'Courier New', Courier, monospace;
+}
+
+h3{
+  margin-top: 20px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.botao {
+  font-weight: bold;
+  background-color: #f5d883;
+  border: 2px solid #b53f3f;
+  font-family: 'Courier New', Courier, monospace;
+  color: #333;
+  padding: 10px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 30px;
+  margin: 20px 0;
+}
+
+.botao:hover{
+  transition: 0.1s ease-in;
+  transform: scale(1.2);
+}
+
+.botao:active{
+  transition: 0.1s ease-in;
+  background-color: #87ef73;
+  border: 2px solid #ffffff;
+  transform: scale(0.9);
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+}
+
+input{
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+}
