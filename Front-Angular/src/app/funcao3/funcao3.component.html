@@ -1,9 +1,12 @@
 <div class="container">
-  <h2>{{ abrirPagina }}</h2>
-  <h2>Bora deletar essa última soma lá do Node!</h2>
+  <p>Lembra o resultado da sua ultima soma?</p>
+  <button class="botao" (click)="AbrirPagina()">Clica aqui pra ver</button>
+  <div id="resposta"></div>
   <h2>------------------------------------------</h2>
-  <button class="botao">Delete!</button>
+  <h2>Bora deletar ela lá do Node!</h2>
+  <button class="botao" (click)="Delete()">Delete!</button>
+  <div id="resposta2"></div>
   <h2>------------------------------------------</h2>
-  <div class="resposta" id="resposta"></div>
+  <h3 id="resposta3"></h3>
   <a class="botao" href="/">Quer começar do zero?</a>
 </div>

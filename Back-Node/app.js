@@ -20,7 +20,7 @@ app.get("/", function(req,res){
 app.get("/funcao1", function (req, res){
     res.header("Access-Control-Allow-Origin", "*");
     console.log("Alguém passou por aqui");
-    res.send("CONECTOU!! É nota 8! Vamos seguir...");     
+    res.send("CONECTOU!! Só isso aqui já um 8 em!? Vamos seguir...");     
 });
 
 app.post("/funcao2", function (req, res){
@@ -29,13 +29,20 @@ app.post("/funcao2", function (req, res){
     let n1 = parseInt(req.body.n1);
     let n2 = parseInt(req.body.n2);
     n3 = n1 + n2;
-    res.send(`Fiz sua soma! o resultado é ${n3}`);
+    res.send(`O resultado é ${n3}!`);
 });
 
 app.get("/funcao3", function(req,res){
     res.header("Access-Control-Allow-Origin","*");
     console.log("Alguém passou por aqui");
-    res.send(`Beleza! Lembra o resultado da sua ultima soma? Foi ${n3}.`);
+    res.send(`Foi ${n3}!`);
+});
+
+app.post("/funcao3", function(req,res){
+    res.header("Access-Control-Allow-Origin","*");
+    console.log("Alguém passou por aqui");
+    n3 = 0;
+    res.send(`Pronto! Agora o valor salvo no servidor é ${n3}.`);
 });
 
 app.listen(port, () => {

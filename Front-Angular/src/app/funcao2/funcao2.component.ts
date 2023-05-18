@@ -14,7 +14,9 @@ export class Funcao2Component {
   funcao2(n1:string, n2:string) {
     console.log("teste 1 válidado");
     let resposta = document.getElementById("resposta");
+    let resposta2 = document.getElementById("resposta2");
     let p = document.createElement("p");
+    let p2 = document.createElement("p");
     $.post("http://localhost:3000/funcao2", {
         "n1":n1,
         "n2":n2
@@ -22,6 +24,10 @@ export class Funcao2Component {
         console.log("teste 2 válidado");
         console.log(res);
         p.textContent = res;
+        if(p.textContent === res){
+          p2.textContent = "Isso já daria um 9,5 em? Mas ainda tem mais...";
+          resposta2?.appendChild(p2);
+          }
         resposta?.appendChild(p);
     });
   }
