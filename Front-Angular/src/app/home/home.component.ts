@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-home',
@@ -6,11 +7,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-  aluno = "Pedro Rodante";
 
+  constructor(private http: HttpClient) { }
+
+  aluno = "Pedro Rodante";
+  n3: string | any;
   funcao1() {
     console.log("teste 1 válidado");
-      $.post("http://localhost:3000/funcao1", {}, 
+      $.get("http://localhost:3000/funcao1", {}, 
     (res) => {
       console.log("teste 2 válidado");
       res.send(res);
@@ -19,15 +23,15 @@ export class HomeComponent {
   }
 
   funcao2(n1:string, n2:string) {
+    const nmnn = {
+      "nm": this.n3,
+    };
+    this.n3 = n1 + n2
     console.log("teste 1 válidado");
-      $.post("http://localhost:3000/funcao2", {
-        "n1":n1,
-        "n2":n2
-      }, 
+    this.http.post("http://localhost:3000/funcao2", nmnn, { responseType: 'text' }).subscribe((resultData: any) => {
     (res) => {
-      console.log("teste 2 válidado");
-      res.send(res);
-      console.log(res);
+      
+    };  
     });
   }
     
