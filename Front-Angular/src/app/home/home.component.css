@@ -40,14 +40,3 @@ h3{
   border: 2px solid #ffffff;
   transform: scale(0.9);
 }
-
-form{
-  display: flex;
-  flex-direction: column;
-}
-
-input{
-  border: none;
-  border-radius: 5px;
-  padding: 5px;
-}

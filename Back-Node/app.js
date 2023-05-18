@@ -3,6 +3,7 @@ var app = express();
 var port = process.env.PORT || 3000;
 var bodyParser = require('body-parser');
 const cors = require('cors');
+let n3 = 0;
 
 app.use(cors({
     origin: "http://localhost:4200"
@@ -25,16 +26,16 @@ app.get("/funcao1", function (req, res){
 app.post("/funcao2", function (req, res){
     res.header("Access-Control-Allow-Origin", "*");
     console.log("Alguém passou por aqui");
-    const body = req.body
-    var num = parseInt(body.n3)
-    if(num >= 0)
-    {
-        res.send("Sua soma foi identificada pelo back e é um numero positivo")
-    }
-    else
-    {
-        res.send("Sua soma foi identificada pelo back e é um numero negativo")
-    }   
+    let n1 = parseInt(req.body.n1);
+    let n2 = parseInt(req.body.n2);
+    n3 = n1 + n2;
+    res.send(`Fiz sua soma! o resultado é ${n3}`);
+});
+
+app.get("/funcao3", function(req,res){
+    res.header("Access-Control-Allow-Origin","*");
+    console.log("Alguém passou por aqui");
+    res.send(`Beleza! Lembra o resultado da sua ultima soma? Foi ${n3}.`);
 });
 
 app.listen(port, () => {

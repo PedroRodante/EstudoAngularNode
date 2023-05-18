@@ -1,0 +1,26 @@
+<div class="container">
+<h2>Agora somaremos 2 numeros!</h2>
+<div class="f2">
+  <label for="n1">Insira o primeiro numero</label>
+  <input
+    type="number"
+    id="n1"
+    name="n2"
+    required
+    placeholder="Pega leve nesse numerinho!"
+    #n1
+  />
+  <label for="n2">Insira o segundo numero</label>
+  <input
+    type="number"
+    id="n2"
+    name="n2"
+    required
+    placeholder="Pega leve nesse numerinho!"
+    #n2
+  />
+  <button class="botao" (click)="funcao2(n1.value, n2.value)">Some!</button>
+</div>
+<div class="resposta" id="resposta"></div>
+<a class="botao" href="/funcao3">Bora pra terceira função!</a>
+</div>
