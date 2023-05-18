@@ -12,6 +12,7 @@ export class HomeComponent {
 
   aluno = "Pedro Rodante";
   n3: string | any;
+  
   funcao1() {
     console.log("teste 1 válidado");
       $.get("http://localhost:3000/funcao1", {}, 
@@ -28,11 +29,13 @@ export class HomeComponent {
     };
     this.n3 = n1 + n2
     console.log("teste 1 válidado");
-    this.http.post("http://localhost:3000/funcao2", nmnn, { responseType: 'text' }).subscribe((resultData: any) => {
-    (res) => {
-      
-    };  
+    $.post("http://localhost:3000/funcao2", {
+        "n1":n1,
+        "n2":n2
+      },  (res) => {
+        console.log("teste 2 válidado");
+        res.send(res);
+        console.log(res);
     });
   }
-    
 }
